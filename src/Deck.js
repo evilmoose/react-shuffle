@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import axios from "axios";
-import "./Deck.css";
+import "./App.css";
 
 const API_BASE_URL = "https://deckofcardsapi.com/api/deck";
 /** Deck: uses deck API, allows drawing card at a time. */
@@ -57,7 +57,7 @@ const Deck = () => {
   }
 
   /** Return draw button (disabled if shuffling) */
-  const renderDrawBtnIfOk = async () => {
+  const renderDrawBtnIfOk = () => {
     if (!deck) return null;
 
     return (
